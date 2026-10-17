@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#29493c">
+  <meta name="description" content="Vendas, estoque e resultados da Lili Papelaria em um só lugar.">
+  <title>Lili Papelaria · Vendas e estoque</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%2329493c'/%3E%3Ctext x='20' y='47' font-family='Georgia' font-size='48' font-style='italic' fill='%23f5eecf'%3El%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#content">Ir para o conteúdo</a>
+  <aside class="sidebar" aria-label="Menu principal">
+    <a href="#dashboard" class="brand" aria-label="Lili Papelaria, início"><span class="brand-word">lili<span>.</span></span><span class="brand-sub">PAPELARIA</span></a>
+    <span class="nav-label">MEU NEGÓCIO</span>
+    <nav id="nav"></nav>
+    <div class="sidebar-note"><span class="flower">✳</span><p>Cada venda,<br>uma nova história.</p><span>Feito para a sua papelaria.</span></div>
+    <div class="store-sign"><span class="avatar">L</span><div><strong>Lili Papelaria</strong><small>Guajeru · Fortaleza</small></div></div>
+  </aside>
+  <div class="workspace">
+    <header class="topbar"><div class="crumb">Lili Papelaria <span>/</span> <strong id="crumb-title">Visão geral</strong></div><div class="top-actions"><span id="today-date"></span><span class="private-badge"><i></i> Meu painel</span><button class="button primary small" data-action="go-sale" id="top-sale">+ Nova venda</button></div></header>
+    <main id="content" tabindex="-1"></main>
+    <footer><span>Lili Papelaria <b>·</b> Gestão com carinho</span><span id="save-status">Dados neste navegador · faça backups regularmente</span></footer>
+  </div>
+  <dialog id="modal" aria-labelledby="modal-title"></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <section id="print-area" aria-label="Comprovante de venda"></section>
+  <input type="file" id="backup-file" accept=".json,application/json" hidden>
+  <noscript>Ative o JavaScript para usar o dashboard da Lili Papelaria.</noscript>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
